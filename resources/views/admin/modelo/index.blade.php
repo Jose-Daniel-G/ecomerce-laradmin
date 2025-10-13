@@ -1,3 +1,16 @@
+@extends('adminlte::page')
+
+@section('title', 'Dashboard')
+@section('css')
+@stop
+@section('content_header')
+    <h1>Panel principal</h1>
+@stop
+@section('content') 
+@stop
+
+@section('js')
+@stop
 {{-- button create --}}
 <a class="btn btn-secondary" data-toggle="modal" data-target="#createModal">Registrar<i class="bi bi-plus-circle-fill"></i></a>
                                             {{-- button SHOW --}}

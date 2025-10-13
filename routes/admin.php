@@ -1,7 +1,6 @@
 <?php
 
-use App\Http\Controllers\Admin\CategoryController;
-use App\Http\Controllers\Admin\CoberController;
+use App\Http\Controllers\Admin\CategoryController; 
 use App\Http\Controllers\Admin\CoverController;
 use App\Http\Controllers\Admin\DriverController;
 use App\Http\Controllers\Admin\FamilyController;
@@ -9,17 +8,15 @@ use App\Http\Controllers\Admin\OptionController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\ShipmentController;
 use App\Http\Controllers\Admin\SubcategoryController;
-use App\Http\Controllers\Admin\VariantController;
-use App\Livewire\Admin\UserComponent;
-use App\Models\Product;
-use App\Models\Variant;
+use App\Http\Controllers\Admin\UserProfileController;
+use App\Livewire\Admin\UserComponent; 
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('admin.dashboard');
 })->name('dashboard');//->middleware('can:access dashboard')
 
-Route::resource('families', FamilyController::class);
+Route::resource('families', FamilyController::class)->names('families');
 Route::resource('categories', CategoryController::class);
 Route::resource('options', OptionController::class);
 Route::resource('subcategories', SubcategoryController::class);
@@ -35,6 +32,7 @@ Route::put('products/{product}/variants/{variant}', [ProductController::class, '
 Route::resource('drivers', DriverController::class);
 Route::resource('orders', ShipmentController::class);
 Route::resource('covers', CoverController::class);
+// Route::get('users', UserComponent::class)->name('admin.users.index');
 
 // Route::resource('products/{product}/variants/{variant}', [ProductController::class,'index'])
 //         ->name('products.variants')->scopeBindings();
@@ -52,4 +50,8 @@ Route::resource('covers', CoverController::class);
 // Route::get('departments', DepartmentComponent::class)->name('admin.departments.index');
 // Route::get('departments/{department}', ShowDepartment::class)->name('admin.departments.show');
 // Route::get('cities/{city}', CityComponent::class)->name('admin.cities.show');
-Route::get('users', UserComponent::class)->name('admin.users.index');
+
+/** CONFIG PROFILE  **/
+Route::get('/user/profile', [UserProfileController::class, 'index'])->name('profile.index');
+Route::put('/user/profile-information', [UserProfileController::class, 'update'])->name('user-profile-information.update');
+Route::put('/user/profile-password', [UserProfileController::class, 'updatePassword'])->name('user-profile-password.updatePassword');

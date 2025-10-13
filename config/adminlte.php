@@ -265,7 +265,7 @@ return [
     // 'profile_url' => false,
 
     'use_route_url' => true,
-    'dashboard_url' => 'admin.index',
+    'dashboard_url' => 'dashboard',
     'logout_url' => 'logout',
     'login_url' => 'login',
     'register_url' => false, //'register',
@@ -306,186 +306,57 @@ return [
 
         [
             'text'  => 'Dashboard',
-            'route' => 'admin.home',
+            'route' => 'dashboard',
             'icon'  => 'fas fa-home fa-fw ',
         ],
         [
-            'text'        => 'Gestión de Asistencias',
-            'icon' => 'fas fa-fw fa-user',
-            'label' => 'waiting',
-            'label_color' => 'light',
-            // 'can'  => 'admin.asistencias.index',
-            'submenu' => [
-                [
-                    'text' => 'Registrar Asistencia',
-                    'icon'        => 'far fa-circle nav-icon',
-                    'label' => '?',
-                    'label_color' => 'light',
-                    'route' => 'admin.asistencias.index',
-                    'can' => 'admin.asistencias.index',
-                ],
-                [
-                    'text' => 'Listado de Inacistencias',
-                    'icon'        => 'far fa-circle nav-icon',
-                    'label' => '?',
-                    'label_color' => 'light',
-                    'route' => 'admin.secretarias.inasistencias',
-                    'can' => 'admin.asistencias.inasistencias',
-                ],
-
-            ],
-        ],
-
-
-        ['header' => 'ADMINISTRADOR', 'can' => 'admin.secretarias.index',],
-        [
-            'text' => 'Programador',
-            'icon' => 'fas fa-laptop',
-            // 'label_color' => 'warning',
-            'can' => 'admin.secretarias.index',
-            'submenu' => [
-                // ['text' => 'Creacion de programador','icon' => 'far fa-circle nav-icon','route' => 'admin.secretarias.create',],
-                [
-                    'text' => 'Listado de programador',
-                    'icon' => 'far fa-circle nav-icon',
-                    'route' => 'admin.secretarias.index',
-                ],
-
-            ],
+            'text' => 'Familias de productos',
+            'icon'        => 'fa-solid fa-box-open',
+            'route' => 'admin.families.index',
         ],
         [
-            'text' => 'Clientes',
-            'icon' => 'fas fa-users mr-2',
-            'can' => 'admin.clientes.index',
-            'submenu' => [
-                // ['text' => 'Creacion de clientes','icon'=> 'far fa-circle nav-icon','route' => 'admin.clientes.create',],
-                [
-                    'text' => 'Listado de clientes',
-                    'icon' => 'far fa-circle nav-icon',
-                    'route' => 'admin.clientes.index',
-                ],
-
-            ],
+            'text' => 'Categorias',
+            'icon' => 'fa-solid fa-tags',
+            'url'  => '#',
+            // 'route' => 'admin.categories.index',
         ],
         [
-            'text' => 'Cursos',
-            'icon' => 'fas fa-book',
-            // 'label' => 'check cr activo',
-            // 'label_color' => 'primary',
-            'can' => 'admin.cursos.index',
-            'submenu' => [
-                // ['text' => 'Creacion de cursos','icon'=> 'far fa-circle nav-icon','route' => 'admin.cursos.create', ],
-                [
-                    'text' => 'Listado de cursos',
-                    'icon'        => 'far fa-circle nav-icon',
-                    'route' => 'admin.cursos.index',
-                ],
-
-            ],
+            'text' => 'Subcategorias',
+            'icon' => 'fa-solid fa-tag',
+            'route ' => 'admin.subcategories.index',
         ],
         [
-            'text' => 'Profesores',
-            'icon' => 'fa-solid fa-chalkboard-user',
-            'can' => 'admin.profesores.index',
-            'submenu' => [
-                // ['text' => 'Creacion de profesores','icon' => 'far fa-circle nav-icon','route' => 'admin.profesores.create', ],
-                [
-                    'text'  => 'Listado de profesores',
-                    'icon'  => 'far fa-circle nav-icon',
-                    'route' => 'admin.profesores.index',
-                ],
-                // [ 'text'  => 'Reportes',  'icon'  => 'far fa-circle nav-icon', 'route' => 'admin.profesores.reportes', ],
-            ],
+            'text' => 'Productos',
+            'icon' => 'fa-solid fa-box',
+            'url'  => '#',
+            // 'route' => 'admin.products.index',
         ],
         [
-            'text' => 'Horarios',
-            'icon' => 'fas fa-calendar-alt',
-            'can' => 'admin.horarios.index',
-            'submenu' => [
-                [
-                    'text' => 'Creacion de horarios',
-                    'icon'        => 'far fa-circle nav-icon',
-                    'route' => 'admin.horarios.create',
-                ],
-                [
-                    'text' => 'Listado de horarios',
-                    'icon'        => 'far fa-circle nav-icon',
-                    'route' => 'admin.horarios.index',
-                ],
-
-            ],
+            'text' => 'Portadas',
+            'icon' => 'fa-solid fa-images',
+            'url'  => '#',
+            // 'route' => 'admin.covers.index',
         ],
         [
-            'text' => 'Vehiculos',
-            'icon' => 'bi bi-car-front',
-            'can'  => 'admin.vehiculos.index',
-            'submenu' => [
-                [
-                    'text' => 'vehiculos',
-                    'icon'        => 'far fa-circle nav-icon',
-                    'route'  => 'admin.vehiculos.index',
-                ],
-                [
-                    'text' => 'Picoyplaca',
-                    'icon'        => 'far fa-circle nav-icon',
-                    'route' => 'admin.picoyplaca.index',
-                ],
-            ],
+            'text' => 'Conductores',
+            'icon' => 'fa-solid fa-car',
+            'url'  => '#',
+            // 'route' => 'admin.drives.index',
         ],
         [
-            'text' => 'Configuraciones',
-            'icon' => 'bi bi-gear',
-            'can'  => 'admin.config.index',
-            'submenu' => [
-                [
-                    'text'        => 'Usuarios',
-                    'route'         => 'admin.users.index',
-                    'icon' => 'fas fa-users fa-fw ',
-                    'permissions'  => 'admin.users.index',
-                ],
-                [
-                    'text'        => 'permisos',
-                    'route'         => 'admin.permissions.index',
-                    'icon' => 'fas fa-key fa-fw ',
-                    'permissions'  => 'admin.users.index',
-                ],
-                [
-                    'text'        => 'roles',
-                    'route'         => 'admin.roles.index',
-                    'icon' => 'fa-solid fa-address-book',
-                    'permissions'  => 'admin.roles.index',
-                ],
-                [
-                    'text' => 'Configuracion',
-                    'icon' => 'fa-solid fa-gears',
-                    'route' => 'admin.config.index',
-                ],
-            ],
-
+            'text' => 'Ordenes',
+            'icon' => 'fa-solid fa-images',
+            'url'  => '#',
+            // 'route' => 'admin.orders.index',
         ],
         [
-            'text' => 'News-post',
-            'icon' => 'fa-regular fa-circle-question',
-            'can'  => 'admin.config.index',
-            'submenu' => [
-                [
-                    'text'  => 'Categorias',
-                    'route' => 'categories.index',
-                    'icon'  => 'fa-solid fa-layer-group',
-                ],
-                [
-                    'text'  => 'Posts',
-                    'route' => 'posts.index',
-                    'icon'  => 'nav-icon fas fa-copy',
-                ],
-                [
-                    'text'  => 'VER NOTICIAS/POSTS',
-                    'route' => 'home',
-                    'icon'  => 'fa-solid fa-newspaper',
-                ],
-            ],
-        ]
-        // ['text'=> 'Agenda','route' => 'admin.users.index','icon' => 'fas fa-envelope',],
+            'text' => 'Envios',
+            'icon' => 'fa-solid fa-box',
+            'url'  => '#',
+            // 'route' => 'admin.drives.index',
+        ],
+    
+        // ['text'=> 'Agenda','url' => 'admin.users.index','icon' => 'fas fa-envelope',],
         // ['text' => 'information','icon_color' => 'cyan','url' => '#', ],
     ],
 

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\ShipmentController;
+use App\Http\Controllers\Admin\UserProfileController;
 use App\Http\Controllers\FamilyController;
 use App\Http\Controllers\WelcomeController;
 use App\Models\Product;
@@ -11,15 +12,13 @@ Route::get('/', [WelcomeController::class,'index'])->name('welcome.index');
 Route::get('/families/{family}', [FamilyController::class,'show'])->name('families.show');
 Route::get('shipping', [ShipmentController::class,'index'])->name('shipping.index');
 
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified',
+Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified',
 ])->group(function () {
     Route::get('/dashboard', function () {
-        return view('dashboard');
+        return view('admin.index');
     })->name('dashboard');
 });
+
 
 
 

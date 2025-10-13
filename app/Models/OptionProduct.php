@@ -4,9 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\Pivot;
 
-class File extends Model
+class OptionProduct extends Pivot
 {
-    protected $fillable =['url'];
     use HasFactory;
+    protected $casts = [ 'features'=> 'array']; 
 }
