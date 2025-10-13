@@ -19,48 +19,50 @@ Category → family
 - [x] Introducción  
 - [x] Diseño de la BBDD  
 - [x] Administrador  
+  
 <details>
   <summary>🧱 Familias (4 pasos)</summary>
 
   - [x] Listar  
-  - [x] Crear   
-  - [X] Editar   
-  - [X] Eliminar   
+  - [ ] Crear   
+  - [ ] Editar   
+  - [ ] Eliminar   
 
 </details>
-- [x] SweetAlert 2  
-- [x] CRUD de Categorías  
-- [x] CRUD de Subcategorías  
-- [x] CRUD de Productos  
+
+- [ ] SweetAlert 2  
+- [ ] CRUD de Categorías  
+- [ ] CRUD de Subcategorías  
+- [ ] CRUD de Productos  
 
 <details>
   <summary>🧱 Variantes (6 pasos)</summary>
 
-  - [x] Crear variantes 1  
-  - [x] Crear variantes 2  
-  - [x] Recursividad  
-  - [X] Generar variantes  
-  - [X] Mostrar variantes  
-  - [X] Editar variantes  
+  - [ ] Crear variantes 1  
+  - [ ] Crear variantes 2  
+  - [ ] Recursividad  
+  - [ ] Generar variantes  
+  - [ ] Mostrar variantes  
+  - [ ] Editar variantes  
 
 </details>
 
-- [x] Cabecera  
+- [ ] Cabecera  
 
 ---
 
 ### 🚧 En desarrollo
 
-- [X] Portadas  
+- [ ] Portadas  
 <details>
   <summary>Filtros (11 pasos)</summary>
 
-  - [x] Mostrar opciones y features por familia  
-  - [x] Mostrar opciones y features por familia II  
-  - [x] Mostrar y ocultar features  
-  - [x] Mostrar productos por familia  
-  - [x] Volver responsivo pagina filtros  
-  - [x] Filtrar productos por features 
+  - [ ] Mostrar opciones y features por familia  
+  - [ ] Mostrar opciones y features por familia II  
+  - [ ] Mostrar y ocultar features  
+  - [ ] Mostrar productos por familia  
+  - [ ] Volver responsivo pagina filtros  
+  - [ ] Filtrar productos por features 
   - [ ] Cambiar el orden en el que se muestran los productos 
   - [ ] Utilizr el buscador para filtrar 
   - [ ] Filtrar por categoria
@@ -84,11 +86,13 @@ Category → family
   <summary>Laravel Permission (7 pasos)</summary>
 
   - [x] Instalar spatie  
-  - [x] Definir Permisos  
-  - [x] Definir Roles  
-  - [x] Proteger rutas segun lo permisos  
+  - [ ] Definir Permisos  
+  - [ ] Definir Roles  
+  - [ ] Proteger rutas segun lo permisos  
   - [ ] Mostrar listado de usuarios 
   - [ ] Agregar Buscador  
   - [ ] Asignar Rol 
 
 </details>
+
+![Ecommerce Adminlte](images/ecommerce.png)
