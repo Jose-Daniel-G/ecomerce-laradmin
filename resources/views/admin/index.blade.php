@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard'){{-- @section('plugins.Sweetalert2', true) --}}
+@section('title', 'Ecommerce'){{-- @section('plugins.Sweetalert2', true) --}}
 @section('css')
     @vite('resources/css/items.css')
 

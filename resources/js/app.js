@@ -12,4 +12,4 @@ import 'datatables.net-buttons-bs5/css/buttons.bootstrap5.min.css';
 import 'datatables.net-buttons/js/buttons.html5.min.js';
 import 'datatables.net-buttons/js/buttons.print.min.js';
 
-import './pages/delete-confirm.ts';
+// import './pages/delete-confirm.ts';

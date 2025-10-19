@@ -316,9 +316,8 @@ return [
         ],
         [
             'text' => 'Categorias',
-            'icon' => 'fa-solid fa-tags',
-            'url'  => '#',
-            // 'route' => 'admin.categories.index',
+            'icon' => 'fa-solid fa-tags', 
+            'route' => 'admin.categories.index',
         ],
         [
             'text' => 'Subcategorias',
@@ -328,14 +327,12 @@ return [
         [
             'text' => 'Productos',
             'icon' => 'fa-solid fa-box',
-            'url'  => '#',
-            // 'route' => 'admin.products.index',
+            'route' => 'admin.products.index',
         ],
         [
             'text' => 'Portadas',
-            'icon' => 'fa-solid fa-images',
-            'url'  => '#',
-            // 'route' => 'admin.covers.index',
+            'icon' => 'fa-solid fa-images', 
+            'route' => 'admin.covers.index',
         ],
         [
             'text' => 'Conductores',

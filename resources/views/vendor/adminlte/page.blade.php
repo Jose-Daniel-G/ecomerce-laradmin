@@ -57,13 +57,12 @@
     @stack('js') @yield('js')
     @if (session('swal') && session('info'))  <!-- SWEET ALERT MESSAGE -->
         <script>
-            Swal.fire({title: "{{ session('title') }}",text: "{{ session('info') }}",icon: "{{ session('icono') }}"});
+            Swal.fire({title: "{{ session('title') }}",text: "{{ session('info') }}",icon: "{{ session('icon') }}"});
         </script>
-    @endif
-    @if (session('info'))  <!-- TOAST ALERT MESSAGE -->
+    @else <!-- TOAST ALERT MESSAGE -->
         <script>toastr.success('{{ session('info') }}');</script> 
     @endif 
-    @vite(['resources/js/pages/delete-confirm.ts'])
+    {{-- @vite(['resources/js/pages/delete-confirm.ts']) --}}
 
     {{-- @if (($message = Session::get('message')) && ($icon = Session::get('icon')))  <script></script> @endif --}}
 @stop

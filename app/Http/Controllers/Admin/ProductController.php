@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Family;
 use App\Models\Product;
 use App\Models\Variant;
 use Illuminate\Http\Request;
@@ -23,7 +24,8 @@ class ProductController extends Controller
     }
     public function create(Request $request)
     {
-        return view('admin.products.create');
+        $families=Family::all();
+        return view('admin.products.create',compact('families'));
     }
 
     public function edit(Product $product)

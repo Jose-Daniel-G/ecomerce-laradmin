@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'Ecommerce')
 @section('css')
 @stop
 @section('content_header')

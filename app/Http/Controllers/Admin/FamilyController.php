@@ -31,34 +31,39 @@ class FamilyController extends Controller
         ]);
 
         Family::create($data);
-        session()->flash('swal',['icon'=>'success', 'title'=>'!Bien echo', 'text'=>'Familia creada correctamente']);
-
-        return redirect()->route('admin.families.index');
+        return redirect()->route('admin.families.index')->with([
+            'swal' => 1,
+            'icon' => 'success',
+            'title' => '!Bien hecho',
+            'info'  => 'Familia creada correctamente',
+        ]);
     }
     public function edit(Family $family)
     {
-        return view('admin.families.edit', compact('family'));
+        // dump($family);
+        return response()->json($family);
     }
     public function update(Request $request, Family $family)
     {
-        $data = $request->validate([
-            'name' => 'required|string|max:255',
-        ]);
+        $data = $request->validate(['name' => 'required|string|max:255',]);
 
         $family->update($data);
-        session()->flash('swal',['icon'=>'success', 'title'=>'!Bien echo', 'text'=>'Familia actualizada correctamente']);
-        return redirect()->route('admin.families.edit', $family);
+        return redirect()->back()->with([
+            'swal'  => 1,
+            'icon'  => 'success',
+            'title' => '¡Bien hecho!',
+            'info'  => 'Familia actualizada correctamente',
+        ]);
     }
     public function destroy(Family $family)
     {
-        if($family->categories->count()){
-            session()->flash('swal',['icon'=>'error', 'title'=>'Ups!', 'text'=>'No se puede eliminar la familia porque tiene categorias asociadas']);
-            return redirect()->route('admin.families.edit',$family);
+        if ($family->categories->count()) {
+            return redirect()->route('admin.families.edit', $family)
+                ->with(['swal' => 1, 'icon' => 'error', 'title' => 'Ups!', 'info' => 'No se puede eliminar la familia porque tiene categorias asociadas']);
         }
         $family->delete();
 
-        session()->flash('swal',['icon'=>'success', 'title'=>'!Bien echo', 'text'=>'Familia eliminada correctamente']);
-
-        return redirect()->route('admin.families.index');
+        return redirect()->route('admin.families.index')
+            ->with(['swal' => 1, 'icon' => 'success', 'title' => '!Bien echo', 'info' => 'Familia eliminada correctamente']);
     }
 }

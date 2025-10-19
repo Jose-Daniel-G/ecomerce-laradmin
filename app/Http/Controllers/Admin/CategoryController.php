@@ -13,19 +13,19 @@ class CategoryController extends Controller
     // {
     //     $this->middleware('can:manage categories');
     // }
-     public function index()
+    public function index()
     {
-        // $categories = Category::paginate();
         $categories = Category::orderBy('id', 'desc')
-        ->with('family')                
-        ->paginate(10);
+            ->with('family')
+            ->paginate(10);
+        $families = Family::all();
 
-        return view('admin.categories.index', compact('categories'));
+        return view('admin.categories.index', compact('categories', 'families'));
     }
     public function create(Request $request)
     {
         $families = Family::all();
-        return view('admin.categories.create',compact('families'));
+        return view('admin.categories.create', compact('families'));
     }
     public function store(Request $request)
     {
@@ -35,14 +35,16 @@ class CategoryController extends Controller
         ]);
 
         Category::create($data);
-        session()->flash('swal',['icon'=>'success', 'title'=>'!Bien echo', 'text'=>'Categoria creada correctamente']);
-
-        return redirect()->route('admin.categories.index');
+        return redirect()->route('admin.categories.index')->with(['swal' => 1, 'icon' => 'success', 'title' => '!Bien echo', 'info' => 'Categoria creada correctamente']);
     }
+
     public function edit(Category $category)
     {
         $families = Family::all();
-        return view('admin.categories.edit', compact('category','families'));
+        return response()->json([
+            'category' => $category,
+            'families' => $families,
+        ]);
     }
     public function update(Request $request, Category $category)
     {
@@ -52,18 +54,14 @@ class CategoryController extends Controller
         ]);
 
         $category->update($data);
-        session()->flash('swal',['icon'=>'success', 'title'=>'!Bien echo', 'text'=>'Categoria actualizada correctamente']);
-        return redirect()->route('admin.categories.edit', $category);
+        return redirect()->back()->with(['swal' => 1, 'icon' => 'success', 'title' => '!Bien echo', 'info' => 'Categoria actualizada correctamente']);
     }
     public function destroy(Category $category)
     {
-        if($category->subcategories->count()>0){
-            session()->flash('swal',['icon'=>'error', 'title'=>'Ups!', 'text'=>'No se puede eliminar la categoria porque tiene subcategorias asociadas']);
-            return redirect()->route('admin.categories.edit',$category);
+        if ($category->subcategories->count() > 0) {
+            return redirect()->route('admin.categories.edit', $category)->with(['swal' => 1, 'icon' => 'error', 'title' => 'Ups!', 'info' => 'No se puede eliminar la categoria porque tiene subcategorias asociadas']);
         }
-        session()->flash('swal',['icon'=>'success', 'title'=>'!Bien echo', 'text'=>'Categoria eliminada correctamente']);
+        return redirect()->route('admin.categories.index')->with(['swal' => 1, 'icon' => 'success', 'title' => '!Bien echo', 'info' => 'Categoria eliminada correctamente']);
         $category->delete();
-
-        return redirect()->route('admin.categories.index');
     }
 }

@@ -1,53 +1,33 @@
 @extends('adminlte::page')
-
-@section('title', 'Dashboard')
-@section('css')
-@stop
+@section('title', 'Profile')
 @section('content_header')
-    <h1>Panel principal</h1>
-@stop
-@section('content') 
+    <nav aria-label="breadcrumb">
+        <div class="d-flex justify-content-between align-items-center">
+            <h1>Categorias</h1>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Categorias</li>
+            </ol>
+        </div>
+    </nav>
 @stop
 
+@section('content')
+    <div class="card">
+        <div class="card-header">
+            <div class="d-flex justify-content-end">
+                <h1 class="h4 mb-0">Listado de Categorías</h1>
+                <a data-toggle="modal" data-target="#createModal" class="btn btn-primary">
+                    <i class="fas fa-plus"></i> Crear
+                </a>
+            </div>
+        </div>
+        <div class="card-body">
+        </div>
+    </div>
+    @include('admin.categories.create')
+    @include('admin.categories.edit')
+@stop
 @section('js')
+
 @stop
-{{-- button create --}}
-<a class="btn btn-secondary" data-toggle="modal" data-target="#createModal">Registrar<i class="bi bi-plus-circle-fill"></i></a>
-                                            {{-- button SHOW --}}
-                                            <a href="#" class="btn btn-primary" data-id="{{ $cliente->id }}" data-toggle="modal" data-target="#showModal"> <i class="fas fa-eye"></i></a>
-                                            {{-- button EDIT --}}
-                                            <a href="#" class="btn btn-warning btn-sm mr-1" data-id="{{ $cliente->id }}" data-toggle="modal" data-target="#editModal" title="Editar"> <i class="fas fa-edit"></i></a>
-
-{{-- INCLUDE --}}
-</table>
-@include('admin.clientes.create')
-@include('admin.clientes.edit')
-@include('admin.clientes.show')
-
-dame esta modal con sus id="edit- y el jquery:
-{{-- JAVASCRIPT --}}
-$('#editModal').on('show.bs.modal', function(event) {
-        var button = $(event.relatedTarget); // botón que abre el modal
-        var id = button.data('id'); // ID del curso
-        var modal = $(this);
-
-        var url = "{{ route('admin.cursos.edit', ':id') }}".replace(':id', id);
-        $.ajax({
-            url: url,
-            method: 'GET',
-            success: function(data) {
-                // Cambiar la URL del form
-                var formAction = "{{ route('admin.cursos.update', ':id') }}".replace(':id', data.id);
-                modal.find('#editForm').attr('action', formAction);
-
-                // Llenar los campos
-                modal.find('#edit-nombre').val(data.nombre);
-                //...
-                //...
-                //...
-            },
-            error: function(xhr) {
-                console.error('Error al cargar los datos del curso:', xhr);
-                       }
-        });
-    });
