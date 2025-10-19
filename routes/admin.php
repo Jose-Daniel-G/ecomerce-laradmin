@@ -50,6 +50,8 @@ Route::resource('covers', CoverController::class);
 // Route::get('departments', DepartmentComponent::class)->name('admin.departments.index');
 // Route::get('departments/{department}', ShowDepartment::class)->name('admin.departments.show');
 // Route::get('cities/{city}', CityComponent::class)->name('admin.cities.show');
+Route::post('admin/products/{product}/options', [ProductController::class, 'addOption'])
+    ->name('products.addOption');
 
 /** CONFIG PROFILE  **/
 Route::get('/user/profile', [UserProfileController::class, 'index'])->name('profile.index');

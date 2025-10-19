@@ -27,7 +27,7 @@
             <x-message></x-message>{{-- JD  resources/views/components --}}
             @if ($families->count())
                 <div class="table-responsive">
-                    <table id="families" class="table table-hover table-striped table-bordered align-middle">
+                    <table id="families" class="table table-hover table-striped table-bordered align-middle table-sm">
                         <thead class="table-dark">
                             <tr>
                                 <th scope="col" class="text-center">ID</th>

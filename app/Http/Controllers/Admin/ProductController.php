@@ -3,8 +3,11 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use App\Models\Family;
+use App\Models\Option;
 use App\Models\Product;
+use App\Models\Subcategory;
 use App\Models\Variant;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -19,7 +22,6 @@ class ProductController extends Controller
     {
         // $products = Product::paginate();
         $products = Product::orderBy('id', 'desc')->paginate(10);
-
         return view('admin.products.index', compact('products'));
     }
     public function create(Request $request)
@@ -30,7 +32,11 @@ class ProductController extends Controller
 
     public function edit(Product $product)
     {
-        return view('admin.products.edit', compact('product'));
+        $families = Family::all();
+        $categories = Category::all();
+        $subcategories = Subcategory::all();
+        $options = Option::all();
+        return view('admin.products.edit', compact('product','families','categories','subcategories','options'));
     }
 
     public function destroy(Product $product)

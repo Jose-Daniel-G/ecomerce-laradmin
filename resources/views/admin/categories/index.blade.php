@@ -5,7 +5,7 @@
 @section('content_header')
     <nav aria-label="breadcrumb">
         <div class="d-flex justify-content-between align-items-center">
-            <h1>Categorias</h1>
+            {{-- <h1>Categorias</h1> --}}
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Categorias</li>
@@ -16,20 +16,19 @@
 
 @section('content')
     <div class="card">
-        <div class="card-header">
-            <div class="d-flex justify-content-between align-items-center mb-3">
-                <h1 class="h4 mb-0">Listado de Categorías</h1>
+        {{-- <div class="card-header">
+            <div class="d-flex justify-content-between align-items-center">
+                <h1 class="h4">Listado de Categorías</h1>
                 <a data-toggle="modal" data-target="#createModal" class="btn btn-primary">
                     <i class="fas fa-plus"></i> Crear
                 </a>
             </div>
-        </div>
+        </div> --}}
         <div class="card-body table-responsive">
-            {{-- Manejo de Errores --}}
-            <x-message></x-message>{{-- JD  resources/views/components --}}
+            <x-message></x-message>{{-- JD Manejo de Errores  resources/views/components --}}
             @if ($categories->count())
-                <table id="categories" class="table table-striped table-hover align-middle">
-                    <thead class="table-light">
+                <table id="categories" class="table table-striped table-hover align-middle table-bordered table-sm">
+                    <thead class="table-dark">
                         <tr>
                             <th scope="col" style="width: 5%">ID</th>
                             <th scope="col">Nombre</th>
@@ -87,34 +86,18 @@
             autoWidth: false,
             paginate: false,
             dom: 'Bfrtip', // Añade el contenedor de botones
-            buttons: [{
-                    extend: 'copyHtml5',
-                    text: '<i class="bi bi-clipboard-check"></i> Copiar',
-                    className: 'btn btn-sm btn-success'
-                }, // Added btn-sm for better consistency
-                {
-                    extend: 'csvHtml5',
-                    text: '<i class="bi bi-filetype-csv"></i> CSV',
-                    className: 'btn btn-sm btn-warning'
-                },
-                {
-                    extend: 'excelHtml5',
-                    text: '<i class="bi bi-file-earmark-excel"></i> Excel',
-                    className: 'btn btn-sm btn-secondary'
-                },
-                {
-                    extend: 'pdfHtml5',
-                    text: '<i class="bi bi-filetype-pdf"></i> PDF',
-                    className: 'btn btn-sm btn-danger'
-                },
-                {
-                    extend: 'print',
-                    text: '<i class="bi bi-printer"></i> Imprimir',
-                    className: 'btn btn-sm btn-dark'
-                },
-                {
-                    extend: 'colvis'
+            buttons: [ {
+                text: '<i class="fas fa-plus"></i> Crear',
+                className: 'btn btn-success',
+                action: function ( e, dt, node, config ) {
+                    $('#createModal').modal('show'); // Abrir modal
                 }
+            },{extend: 'copyHtml5',text: '<i class="bi bi-clipboard-check"></i> Copiar',className: 'btn btn-sm btn-success'}, // Added btn-sm for better consistency
+                    {extend: 'csvHtml5',text: '<i class="bi bi-filetype-csv"></i> CSV',className: 'btn btn-sm btn-warning'},
+                    {extend: 'excelHtml5',text: '<i class="bi bi-file-earmark-excel"></i> Excel',className: 'btn btn-sm btn-secondary'},
+                    {extend: 'pdfHtml5',text: '<i class="bi bi-filetype-pdf"></i> PDF',className: 'btn btn-sm btn-danger'},
+                    {extend: 'print',text: '<i class="bi bi-printer"></i> Imprimir',className: 'btn btn-sm btn-dark'},
+                    {extend: 'colvis'}
             ],
             "language": {
                 "decimal": "",
@@ -210,4 +193,4 @@
             });
         }
     </script>
-@endsection
+@stop

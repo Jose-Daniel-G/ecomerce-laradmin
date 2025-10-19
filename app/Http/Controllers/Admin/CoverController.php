@@ -20,17 +20,13 @@ class CoverController extends Controller
         return view('admin.covers.index', compact('covers'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
+   
     public function create()
     {
         return view('admin.covers.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
+   
     public function store(Request $request)
     {
         $data = $request->validate(['image' => 'required|image|max:1170', 'title' => 'required|string|max:255', 'start_at' => 'required|date', 'end_at' => 'nullable|date|after_or_equal:start_at', 'is_active' => 'required|boolean']);
@@ -40,26 +36,20 @@ class CoverController extends Controller
         return redirect()->route('admin.covers.edit', $cover);
     }
 
-    /**
-     * Display the specified resource.
-     */
+   
     public function show(Cover $cover)
     {
         return $cover->all();
         return view('admin.covers.show');
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
+   
     public function edit(Cover $cover)
     {
         return view('admin.covers.edit', compact('cover'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
+   
     public function update(Request $request, Cover $cover)
     {
         $data = $request->validate(['image' => 'nullable|image|max:1170', 'title' => 'required|string|max:255', 'start_at' => 'required|date', 'end_at' => 'nullable|date|after_or_equal:start_at', 'is_active' => 'required|boolean']);
@@ -72,9 +62,7 @@ class CoverController extends Controller
         return redirect()->route('admin.covers.edit', $cover);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
+   
     public function destroy(Cover $cover)
     {
         //

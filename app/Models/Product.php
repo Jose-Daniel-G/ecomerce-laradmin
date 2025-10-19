@@ -12,10 +12,16 @@ class Product extends Model
     use HasFactory;
     protected $fillable = ['sku','name', 'description', 'image_path', 'price', 'stock','subcategory_id'];
 
-    protected function image():Attribute{
-        return Attribute::make(get: fn()=>Storage::url($this->image_path));
+    protected function image(): Attribute
+    {
+        return Attribute::make(
+            get: fn() => $this->isUrl($this->image_path) ? $this->image_path : Storage::url($this->image_path)
+        );
     }
-
+    private function isUrl($path): bool
+    {
+        return filter_var($path, FILTER_VALIDATE_URL) !== false;
+    }
     public function subcategory()
     { //relacion muchos a muchos inversa
         return $this->belongsTo(Subcategory::class);
