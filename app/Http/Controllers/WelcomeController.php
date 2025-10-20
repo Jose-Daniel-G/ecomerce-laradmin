@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 class WelcomeController extends Controller
 {
     public function index(){
-        $families = Family::all();
+        $families = Family::all();  
         // $lastProducts = Product::orderBy('created_at','desc')->take(12)->get();                       
         return view('welcome', compact('families'));
     }

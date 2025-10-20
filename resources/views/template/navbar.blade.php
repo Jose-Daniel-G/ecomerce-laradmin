@@ -16,171 +16,47 @@
                         <div class="sub_categories">
                             <h5 class="d-block position-relative d-lg-none subcats_title">
                                 All categories
-                            </h5> 
-                                <div class="singlecats withsub">
-                                <span class="img_wrp">
-                                    <i class="las la-desktop"></i>
-                                </span>
-                                <span class="txt">Computer</span>
-                                <span class="wsicon"><i class="las la-angle-right"></i></span>
-                                <div class="mega_menu">
-                                    <div class="single_mega_menu">
-                                        <div class="mega_menu_wrap">
-                                            <h4>Macbook</h4>
-                                            <div class="mega_categories">
-                                                <a href="#">Mackbook m1</a>
-                                                <a href="#">Mackbook pro</a>
-                                                <a href="#">Mackbook air</a>
-                                                <a href="#">Mackbook 2015</a>
-                                                <a href="#">Mackbook 2020</a>
-                                            </div>
-                                        </div>
-                                        <div class="mega_menu_wrap">
-                                            <h4>Laptop</h4>
-                                            <div class="mega_categories">
-                                                <a href="#">Razer</a>
-                                                <a href="#">Hp Laptop</a>
-                                                <a href="#">Dell Notebook</a>
-                                                <a href="#">Asus</a>
-                                                <a href="#">Lenovo</a>
-                                            </div>
-                                        </div>
-                                    </div>
+                            </h5>  
+@foreach ($families as $family)
+    @if($family->categories->isNotEmpty())
+        <div class="singlecats withsub">
+            <span class="img_wrp">
+                <i class="las la-desktop"></i>
+            </span>
+            <span class="txt">{{ $family->name }}</span>
+            <span class="wsicon"><i class="las la-angle-right"></i></span>
 
-                                    <div class="single_mega_menu">
-                                        <div class="mega_menu_wrap">
-                                            <h4>Dasktop</h4>
-                                            <div class="mega_categories">
-                                                <a href="#">Brand Dasktop</a>
-                                                <a href="#">All in one pc</a>
-                                                <a href="#">Mini PC</a>
-                                                <a href="#">Customize PC</a>
-                                                <a href="#">Dasktop Accessories</a>
-                                            </div>
-                                        </div>
-                                        <div class="mega_menu_wrap">
-                                            <h4>Monitor</h4>
-                                            <div class="mega_categories">
-                                                <a href="#">Samsung</a>
-                                                <a href="#">Philips</a>
-                                                <a href="#">LG</a>
-                                                <a href="#">HP</a>
-                                                <a href="#">Xiaomi</a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="single_mega_menu">
-                                        <div class="mega_menu_wrap">
-                                            <h4>Accessories</h4>
-                                            <div class="mega_categories">
-                                                <a href="#">Dasktop Ram</a>
-                                                <a href="#">Motherboard</a>
-                                                <a href="#">SSD Card</a>
-                                                <a href="#">Hard disk</a>
-                                                <a href="#">Processor</a>
-                                            </div>
-                                        </div>
-                                        <div class="mega_menu_wrap">
-                                            <h4>Gaming</h4>
-                                            <div class="mega_categories">
-                                                <a href="#">Gaming console</a>
-                                                <a href="#">Gaming Chair</a>
-                                                <a href="#">Gaming Desk</a>
-                                                <a href="#">Gaming Controller</a>
-                                                <a href="#">Keyboard</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="single_mega_menu brnd">
-                                        <div class="mega_brands">
-                                            <a href="#" class="mega_brnd_img">
-                                                <img loading="lazy"
-                                                    src="{{ asset('template/assets/images/brand-1.png') }}"
-                                                    alt="brand">
-                                            </a>
-                                            <a href="#" class="mega_brnd_img">
-                                                <img loading="lazy"
-                                                    src="{{ asset('template/assets/images/brand-2.png') }}"
-                                                    alt="brand">
-                                            </a>
-                                            <a href="#" class="mega_brnd_img">
-                                                <img loading="lazy"
-                                                    src="{{ asset('template/assets/images/brand-3.png') }}"
-                                                    alt="brand">
-                                            </a>
-                                            <a href="#" class="mega_brnd_img">
-                                                <img loading="lazy"
-                                                    src="{{ asset('template/assets/images/brand-4.png') }}"
-                                                    alt="brand">
-                                            </a>
-                                            <a href="#" class="mega_brnd_img">
-                                                <img loading="lazy"
-                                                    src="{{ asset('template/assets/images/brand-5.png') }}"
-                                                    alt="brand">
-                                            </a>
-                                            <a href="#" class="mega_brnd_img">
-                                                <img loading="lazy"
-                                                    src="{{ asset('template/assets/images/brand-6.png') }}"
-                                                    alt="brand">
-                                            </a>
-                                            <a href="#" class="mega_brnd_img">
-                                                <img loading="lazy"
-                                                    src="{{ asset('template/assets/images/brand-7.png') }}"
-                                                    alt="brand">
-                                            </a>
-                                            <a href="#" class="mega_brnd_img">
-                                                <img loading="lazy"
-                                                    src="{{ asset('template/assets/images/brand-8.png') }}"
-                                                    alt="brand">
-                                            </a>
-                                            <a href="#" class="mega_brnd_img">
-                                                <img loading="lazy"
-                                                    src="{{ asset('template/assets/images/brand-9.png') }}"
-                                                    alt="brand">
-                                            </a>
-                                            <a href="#" class="mega_brnd_img">
-                                                <img loading="lazy"
-                                                    src="{{ asset('template/assets/images/brand-10.png') }}"
-                                                    alt="brand">
-                                            </a>
-                                            <a href="#" class="mega_brnd_img">
-                                                <img loading="lazy"
-                                                    src="{{ asset('template/assets/images/brand-11.png') }}"
-                                                    alt="brand">
-                                            </a>
-                                            <a href="#" class="mega_brnd_img">
-                                                <img loading="lazy"
-                                                    src="{{ asset('template/assets/images/brand-12.png') }}"
-                                                    alt="brand">
-                                            </a>
-                                            <a href="#" class="mega_brnd_img">
-                                                <img loading="lazy"
-                                                    src="{{ asset('template/assets/images/brand-13.png') }}"
-                                                    alt="brand">
-                                            </a>
-                                            <a href="#" class="mega_brnd_img">
-                                                <img loading="lazy"
-                                                    src="{{ asset('template/assets/images/brand-14.png') }}"
-                                                    alt="brand">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> 
-                            @foreach ($families as $family)
-                            <ul class="list-unstyled mb-0">
-                                <li>
-                                    <a href="{{ route('families.show', $family) }}" class="singlecats">
-
-                                        <span class="txt"> {{ $family->name }}</span>
-                                        <span class="img_wrp">
-                                            <i class="fa-solid fa-angle-right"></i>
-                                        </span>
+            <div class="mega_menu">
+                @foreach($family->categories as $category)
+                    <div class="single_mega_menu">
+                        <div class="mega_menu_wrap">
+                            <h4>{{ $category->name }}</h4>
+                            <div class="mega_categories">
+                                @foreach($category->subcategories as $subcategory)
+                                    <a href="#">
+                                        {{ $subcategory->name }}
                                     </a>
-                                </li>
-                            </ul>
-                            @endforeach
+                                @endforeach
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    @else
+        <ul class="list-unstyled mb-0">
+            <li>
+                <a href="{{ route('families.show', $family) }}" class="singlecats">
+                    <span class="txt">{{ $family->name }}</span>
+                    <span class="img_wrp">
+                        <i class="fa-solid fa-angle-right"></i>
+                    </span>
+                </a>
+            </li>
+        </ul>
+    @endif
+@endforeach
+
  
 
                         </div>
