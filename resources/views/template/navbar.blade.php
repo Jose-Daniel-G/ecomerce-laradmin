@@ -1,3 +1,5 @@
+
+        
     <!-- navbar -->
     <nav class="home-2">
         <div class="container">
@@ -16,49 +18,48 @@
                         <div class="sub_categories">
                             <h5 class="d-block position-relative d-lg-none subcats_title">
                                 All categories
-                            </h5>  
-@foreach ($families as $family)
-    @if($family->categories->isNotEmpty())
-        <div class="singlecats withsub">
-            <span class="img_wrp">
-                <i class="las la-desktop"></i>
-            </span>
-            <span class="txt">{{ $family->name }}</span>
-            <span class="wsicon"><i class="las la-angle-right"></i></span>
+                            </h5>
+                            <div class="category-scroll-content">  
+                            @foreach ($families as $family)
+                                @if($family->categories->isNotEmpty())
+                                    <div class="singlecats withsub">
+                                        <span class="img_wrp">
+                                            <i class="las la-desktop"></i>
+                                        </span>
+                                        <span class="txt">{{ $family->name }}</span>
+                                        <span class="wsicon"><i class="las la-angle-right"></i></span>
 
-            <div class="mega_menu">
-                @foreach($family->categories as $category)
-                    <div class="single_mega_menu">
-                        <div class="mega_menu_wrap">
-                            <h4>{{ $category->name }}</h4>
-                            <div class="mega_categories">
-                                @foreach($category->subcategories as $subcategory)
-                                    <a href="#">
-                                        {{ $subcategory->name }}
-                                    </a>
-                                @endforeach
-                            </div>
+                                        <div class="mega_menu">
+                                            @foreach($family->categories as $category)
+                                                <div class="single_mega_menu">
+                                                    <div class="mega_menu_wrap">
+                                                        <h4>{{ $category->name }}</h4>
+                                                        <div class="mega_categories">
+                                                            @foreach($category->subcategories as $subcategory)
+                                                                <a href="{{ route('subcategories.show', $subcategory) }}">
+                                                                    {{ $subcategory->name }}
+                                                                </a>
+                                                            @endforeach
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            @endforeach
+                                        </div>
+                                    </div>
+                                @else
+                                    <ul class="list-unstyled mb-0">
+                                        <li>
+                                            <a href="{{ route('families.show', $family) }}" class="singlecats">
+                                                <span class="txt">{{ $family->name }}</span>
+                                                <span class="img_wrp">
+                                                    <i class="fa-solid fa-angle-right"></i>
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                @endif
+                            @endforeach
                         </div>
-                    </div>
-                @endforeach
-            </div>
-        </div>
-    @else
-        <ul class="list-unstyled mb-0">
-            <li>
-                <a href="{{ route('families.show', $family) }}" class="singlecats">
-                    <span class="txt">{{ $family->name }}</span>
-                    <span class="img_wrp">
-                        <i class="fa-solid fa-angle-right"></i>
-                    </span>
-                </a>
-            </li>
-        </ul>
-    @endif
-@endforeach
-
- 
-
                         </div>
                     </div>
                 </div>

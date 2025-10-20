@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="{{ asset('template/assets/css/nice-select.css') }}">
     <link rel="stylesheet" href="{{ asset('template/assets/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('template/assets/css/responsive.css') }}">
+    <link rel="stylesheet" href="{{ asset('template/assets/css/welcome.css') }}">
 </head>
 
 <body>
