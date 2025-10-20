@@ -30,3 +30,12 @@ start "" "C:\xampp\mysql\bin\mysqld.exe"
 
 exit
 
+                                        <div class="mega_menu">
+                                            @foreach ($family->categories as $index => $category)
+                                                @if ($index % 3 == 0 && $index != 0) 
+                                                        <span class="bg-primary">Salto - {{ $index }}</span>
+                                                    @else
+                                                        <p> sin - ( {{ $index }} )</p>
+                                                @endif
+                                            @endforeach
+                                        </div>

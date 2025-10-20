@@ -9,7 +9,7 @@
     <title>RAFCART - Multipurpose eCommerce HTML Template</title>
     <link rel="shortcut icon" href="{{ asset('template/assets/images/favicon.png') }}" type="image/x-icon">
 
-    <!-- all css -->  
+    <!-- all css -->
     <link rel="stylesheet" href="{{ asset('template/assets/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('template/assets/css/jquery-ui.css') }}">
     <link rel="stylesheet" href="{{ asset('template/assets/css/slick.css') }}">
@@ -39,7 +39,7 @@
             <a href="#"><i class="las la-home"></i></a>
             <a href="#" class="active">Login</a>
         </div>
-    </div> 
+    </div>
     <!-- MAIN CONTENT -->
     @include('main')
     <!--  END CONTENT -->
@@ -56,5 +56,31 @@
     <script src="{{ asset('template/assets/js/slick.min.js') }}"></script>
     <script src="{{ asset('template/assets/js/jquery.nice-select.min.js') }}"></script>
     <script src="{{ asset('template/assets/js/app.js') }}"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuButton = document.getElementById('menu-button');
+            const subCategories = document.getElementById('sub-categories-wrapper');
+
+            menuButton.addEventListener('click', () => {
+                const isPinned = subCategories.classList.toggle('pinned');
+
+                // Cambiar el ícono y texto del botón
+                const icon = menuButton.querySelector('i');
+                const text = menuButton.querySelector('.icon_text');
+
+                if (isPinned) {
+                    icon.classList.remove('la-bars');
+                    icon.classList.add('la-thumbtack');
+                    text.textContent = 'Unpin menu';
+                } else {
+                    icon.classList.remove('la-thumbtack');
+                    icon.classList.add('la-bars');
+                    text.textContent = 'All categories';
+                }
+            });
+        });
+    </script>
+
 </body>
+
 </html>

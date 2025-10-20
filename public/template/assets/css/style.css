@@ -603,9 +603,8 @@ nav {
 /* mega menu */
 
 .mega_menu {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
+    flex-wrap: wrap;
     position: absolute;
     top: 0;
     left: 200px;
@@ -613,15 +612,19 @@ nav {
     border: 1px solid #E9E4E4;
     border-radius: 5px;
     width: 976px;
-    height: 100%;
-    padding: 20px;
+    max-height: 500px;      /* 🔥 control vertical */
+    overflow-y: auto;       /* scroll interno si hay muchas subcategorías */
+    overflow-x: hidden;     /* evita scroll horizontal */
+    padding: 20px 25px;
     margin-left: 10px;
     opacity: 0;
     visibility: hidden;
-    -webkit-transition: .3s;
-    -o-transition: .3s;
     transition: .3s;
+    box-sizing: border-box;
+    scrollbar-width: thin;           /* Firefox */
+    scrollbar-color: #ccc transparent;
 }
+
 
 .sub_categories .singlecats:hover .mega_menu {
     margin-left: 0px;

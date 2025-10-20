@@ -23,3 +23,24 @@
 .category-scroll-content::-webkit-scrollbar-track {
     background: transparent;
 }
+
+/* Transición suave al cambiar de estado */
+.sub_categories_wrp {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Cuando el menú está pineado */
+.sub_categories_wrp.pinned {
+    position: fixed;   
+}
+
+/* Mantener visible el contenido interno */
+.sub_categories_wrp.pinned .sub_categories  {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+} 
+
+
+/* === CORRECCIÓN SCROLL MEGA MENU === */
+
