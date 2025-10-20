@@ -1,63 +1,86 @@
-	<div class="footer">
-		<div class="container">
+    <!-- footer area -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-md-0">
+                    <div class="row">
+                        <div class="col-12 col-md-6 col-lg-12">
+                            <div class="footer_logo">
+                                <img loading="lazy"  src="{{asset('template/assets/images/svg/logo.svg')}}" alt="easy shop">
+                            </div>
+                            <div class="footet_text">
+                                <p>Lorem ipsum, or lipsum as it is sometimes kno
+                                    wn, is dummy text used in laying out print, gra
+                                    phic or web designs the passage.</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-12">
+                            <div class="footer_newslet">
+                                <h4>Newsletter</h4>
+                                <form class="footernews_form">
+                                    <input type="text" placeholder="Your email address">
+                                    <button type="submit" class="default_btn">Subscribe</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-3 mb-md-0">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="footer_menu">
+                                <h4 class="footer_title">My Account</h4>
+                                <a href="account-order-history.html">Orders</a>
+                                <a href="wish-list.html">Wishlist</a>
+                                <a href="track-order.html">Track Order</a>
+                                <a href="#">Manage Account</a>
+                                <a href="return-order.html">Return Order</a>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="footer_menu">
+                                <h4 class="footer_title">Information</h4>
+                                <a href="about-us.html">About Us</a>
+                                <a href="return-policy.html">Return Policy</a>
+                                <a href="terms-condition.html">Terms & condition</a>
+                                <a href="privacy-policy.html">Privacy Policy</a>
+                                <a href="faq.html">FAQ</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="footer_download">
+                        <div class="row">
+                            <div class="col-lg-6 col-lg-12">
+                                <h4 class="footer_title">Contact</h4>
+                                <div class="footer_contact">
+                                    <p>
+                                        <span class="icn"><i class="las la-map-marker-alt"></i></span>
 
-			<div class="footer-info">
-				<div class="col-md-4 col-sm-4 footer-info-grid links">
-					<h4>QUICK LINKS</h4>
-					<ul>
-						<li><a href="#about">{{ __('actions.about')}}</a></li>
-						<li><a href="#features">{{ __('actions.features')}}</a></li>
-						<li><a href="#skills">{{ __('actions.skills')}}</a></li>
-						<li><a href="#team">{{ __('actions.team')}}</a></li>
-						<li><a href="#">{{ __('actions.home')}}</a></li>
-					</ul>
-				</div>
-				<div class="col-md-4 col-sm-4 footer-info-grid address">
-					<h4>ADDRESS</h4>
-					<address>
-						<ul>
-							<li>Parma Via Modena</li>
-							<li>Cl. 1 Oe. #52-112</li>
-							<li>Cali -Colombia</li>
-							<li>Telephone : +1 (734) 123-4567</li>
-							<li>Email : <a class="mail" href="mailto:mail@example.com">info(at)example.com</a></li>
-						</ul>
-					</address>
-				</div>
-				<div class="col-md-4 col-sm-4 footer-info-grid email">
-					<h4>{{__('actions.newsletter')}}</h4>
-					<p>Suscríbete a nuestra newsletter y te informaremos de nuestros nuevos proyectos y promociones.
-					</p>
-
-					<form class="newsletter">
-						<input class="email" type="email" placeholder="Your email...">
-						<input type="submit" class="submit" value="">
-					</form>
-				</div>
-				<div class="clearfix"></div>
-			</div>
-
-			<div class="connect">
-				<div class="connect-social">
-					<h4>CONECTAR</h4>
-					<ul>
-						<li><a href="#" class="facebook" title="Go to Our Facebook Page"></a></li>
-						<li><a href="#" class="twitter" title="Go to Our Twitter Account"></a></li>
-						<li><a href="#" class="googleplus" title="Go to Our Google Plus Account"></a></li>
-						<li><a href="#" class="linkedin" title="Go to Our Linkedin Page"></a></li>
-						<li><a href="#" class="blogger" title="Go to Our Blogger Account"></a></li>
-						<li><a href="#" class="tumblr" title="Go to Our Tumblr Page"></a></li>
-						<li><a href="#" class="rss" title="Go to Our RSS Feed"></a></li>
-						<li><a href="#" class="youtube" title="Go to Our Youtube Channel"></a></li>
-						<li><a href="#" class="vimeo" title="Go to Our Vimeo Channel"></a></li>
-						<li><a href="#" class="deviantart" title="Go to Our Deviantart Page"></a></li>
-					</ul>
-				</div>
-			</div>
-
-			<div class="copyright">
-				<p>&copy; 2016 Corsa Racer. All Rights Reserved | Design by <a href="http://w3layouts.com/"> W3layouts </a></p>
-			</div>
-
-		</div>
-	</div>
+                                        7895 Dr New Albuquerue, NM 19800, <br> United
+                                        States Of America
+                                    </p>
+                                    <p class="phn">
+                                        <span class="icn"><i class="las la-phone"></i></span>
+                                        +566 477 256, +566 254 575
+                                    </p>
+                                    <p class="eml">
+                                        <span class="icn"><i class="lar la-envelope"></i></span>
+                                        info@domain.com
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="footer_social col-lg-6 col-lg-12">
+                                <div class="footer_icon d-flex">
+                                    <a href="#" class="facebook"><i class="lab la-facebook-f"></i></a>
+                                    <a href="#" class="twitter"><i class="lab la-twitter"></i></a>
+                                    <a href="#" class="instagram"><i class="lab la-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
