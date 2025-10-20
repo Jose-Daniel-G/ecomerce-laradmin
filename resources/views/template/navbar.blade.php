@@ -3,178 +3,24 @@
         <div class="container">
             <div class="d-flex align-items-center justify-content-between">
                 <a href="index-2.html" class="mobile_logo d-block d-lg-none">
-                    <img loading="lazy"  src="{{asset('template/assets/images/svg/logo-white.svg')}}" alt="logo">
+                    <img loading="lazy" src="{{ asset('template/assets/images/svg/logo-white.svg') }}" alt="logo">
                 </a>
                 <div class="all_category otherpage d-none d-lg-block">
                     <div class="bars text-white d-flex align-items-center justify-content-center">
-                                <span class="icon">
-                                    <i class="las la-bars"></i>
-                                </span>
+                        <span class="icon">
+                            <i class="las la-bars"></i>
+                        </span>
                         <span class="icon_text">All categories</span>
                     </div>
                     <div class="sub_categories_wrp">
                         <div class="sub_categories">
                             <h5 class="d-block position-relative d-lg-none subcats_title">
                                 All categories
-                            </h5>
-                            <a href="#" class="singlecats">
-                                    <span class="img_wrp">
-                                       <i class="las la-shoe-prints"></i>  
-                                    </span>
-                                <span class="txt">Shoes</span>
-                            </a>
-
-                            <div class="singlecats withsub">
-                                    <span class="img_wrp">
-                                        <i class="las la-male"></i>
-                                    </span>
-                                <span class="txt">Men</span>
-                                <span class="wsicon"><i class="las la-angle-right"></i></span>
-                                <div class="mega_menu">
-                                    <div class="single_mega_menu">
-                                        <div class="mega_menu_wrap">
-                                            <h4>Hot sale</h4>
-                                            <div class="mega_categories">
-                                                <a href="#">Hoodies $ Sweatshirts</a>
-                                                <a href="#">T-Shirt</a>
-                                                <a href="#">Men’s Sets</a>
-                                                <a href="#">Jacket</a>
-                                                <a href="#">Shoes</a>
-                                            </div>
-                                        </div>
-                                        <div class="mega_menu_wrap">
-                                            <h4>Bottoms</h4>
-                                            <div class="mega_categories">
-                                                <a href="#">Casual Pants</a>
-                                                <a href="#">Men’s Sleep & Lounge</a>
-                                                <a href="#">Jeans</a>
-                                                <a href="#">Shorts</a>
-                                                <a href="#">Towel</a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="single_mega_menu">
-                                        <div class="mega_menu_wrap">
-                                            <h4>Outerwear $ Jackets</h4>
-                                            <div class="mega_categories">
-                                                <a href="#">Jacket</a>
-                                                <a href="#">Sweaters</a>
-                                                <a href="#">Casual Faux Leather</a>
-                                                <a href="#">Parks</a>
-                                                <a href="#">Jeans</a>
-                                            </div>
-                                        </div>
-                                        <div class="mega_menu_wrap">
-                                            <h4>Underwear & Loun</h4>
-                                            <div class="mega_categories">
-                                                <a href="#">Boxes</a>
-                                                <a href="#">Berifs</a>
-                                                <a href="#">Long Johns</a>
-                                                <a href="#">Men’s Sleep & Lounge</a>
-                                                <a href="#">Parks</a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="single_mega_menu">
-                                        <div class="mega_menu_wrap">
-                                            <h4>Accessories</h4>
-                                            <div class="mega_categories">
-                                                <a href="#">Scarves</a>
-                                                <a href="#">Skullies & Beanies</a>
-                                                <a href="#">Casual Faux Leather</a>
-                                                <a href="#">Prescription Glasses</a>
-                                                <a href="#">Belt</a>
-                                            </div>
-                                        </div>
-                                        <div class="mega_menu_wrap">
-                                            <h4>Novelty & Special</h4>
-                                            <div class="mega_categories">
-                                                <a href="#">Cosplay Costumes</a>
-                                                <a href="#">Stage & Dance Wear</a>
-                                                <a href="#">Exotic Apparel</a>
-                                                <a href="#">Scarves</a>
-                                                <a href="#">Men’s Sets</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="single_mega_menu brnd">
-                                        <div class="mega_brands">
-                                            <a href="#" class="mega_brnd_img">
-                                                <img loading="lazy"  src="{{asset('template/assets/images/brand-1.png')}}" alt="brand">
-                                            </a>
-                                            <a href="#" class="mega_brnd_img">
-                                                <img loading="lazy"  src="{{asset('template/assets/images/brand-2.png')}}" alt="brand">
-                                            </a>
-                                            <a href="#" class="mega_brnd_img">
-                                                <img loading="lazy"  src="{{asset('template/assets/images/brand-3.png')}}" alt="brand">
-                                            </a>
-                                            <a href="#" class="mega_brnd_img">
-                                                <img loading="lazy"  src="{{asset('template/assets/images/brand-4.png')}}" alt="brand">
-                                            </a>
-                                            <a href="#" class="mega_brnd_img">
-                                                <img loading="lazy"  src="{{asset('template/assets/images/brand-5.png')}}" alt="brand">
-                                            </a>
-                                            <a href="#" class="mega_brnd_img">
-                                                <img loading="lazy"  src="{{asset('template/assets/images/brand-6.png')}}" alt="brand">
-                                            </a>
-                                            <a href="#" class="mega_brnd_img">
-                                                <img loading="lazy"  src="{{asset('template/assets/images/brand-7.png')}}" alt="brand">
-                                            </a>
-                                            <a href="#" class="mega_brnd_img">
-                                                <img loading="lazy"  src="{{asset('template/assets/images/brand-8.png')}}" alt="brand">
-                                            </a>
-                                            <a href="#" class="mega_brnd_img">
-                                                <img loading="lazy"  src="{{asset('template/assets/images/brand-9.png')}}" alt="brand">
-                                            </a>
-                                            <a href="#" class="mega_brnd_img">
-                                                <img loading="lazy"  src="{{asset('template/assets/images/brand-10.png')}}" alt="brand">
-                                            </a>
-                                            <a href="#" class="mega_brnd_img">
-                                                <img loading="lazy"  src="{{asset('template/assets/images/brand-11.png')}}" alt="brand">
-                                            </a>
-                                            <a href="#" class="mega_brnd_img">
-                                                <img loading="lazy"  src="{{asset('template/assets/images/brand-12.png')}}" alt="brand">
-                                            </a>
-                                            <a href="#" class="mega_brnd_img">
-                                                <img loading="lazy"  src="{{asset('template/assets/images/brand-13.png')}}" alt="brand">
-                                            </a>
-                                            <a href="#" class="mega_brnd_img">
-                                                <img loading="lazy"  src="{{asset('template/assets/images/brand-14.png')}}" alt="brand">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="#" class="singlecats">
-                                    <span class="img_wrp">
-                                        <i class="las la-female"></i>
-                                    </span>
-                                <span class="txt">Women</span>
-                            </a>
-                            <a href="#" class="singlecats">
-                                    <span class="img_wrp">
-                                        <i class="las la-plug"></i>
-                                    </span>
-                                <span class="txt">Electronisc</span>
-                            </a>
-                            <a href="#" class="singlecats">
-                                    <span class="img_wrp">
-                                        <i class="las la-headphones"></i>
-                                    </span>
-                                <span class="txt">Headphones</span>
-                            </a>
-                            <a href="#" class="singlecats">
-                                    <span class="img_wrp">
-                                         <i class="icon-watch"></i>
-                                    </span>
-                                <span class="txt">Watches</span>
-                            </a>
-                            <div class="singlecats withsub">
-                                    <span class="img_wrp">
-                                         <i class="las la-desktop"></i>
-                                    </span>
+                            </h5> 
+                                <div class="singlecats withsub">
+                                <span class="img_wrp">
+                                    <i class="las la-desktop"></i>
+                                </span>
                                 <span class="txt">Computer</span>
                                 <span class="wsicon"><i class="las la-angle-right"></i></span>
                                 <div class="mega_menu">
@@ -249,57 +95,94 @@
                                     <div class="single_mega_menu brnd">
                                         <div class="mega_brands">
                                             <a href="#" class="mega_brnd_img">
-                                                <img loading="lazy"  src="{{asset('template/assets/images/brand-1.png')}}" alt="brand">
+                                                <img loading="lazy"
+                                                    src="{{ asset('template/assets/images/brand-1.png') }}"
+                                                    alt="brand">
                                             </a>
                                             <a href="#" class="mega_brnd_img">
-                                                <img loading="lazy"  src="{{asset('template/assets/images/brand-2.png')}}" alt="brand">
+                                                <img loading="lazy"
+                                                    src="{{ asset('template/assets/images/brand-2.png') }}"
+                                                    alt="brand">
                                             </a>
                                             <a href="#" class="mega_brnd_img">
-                                                <img loading="lazy"  src="{{asset('template/assets/images/brand-3.png')}}" alt="brand">
+                                                <img loading="lazy"
+                                                    src="{{ asset('template/assets/images/brand-3.png') }}"
+                                                    alt="brand">
                                             </a>
                                             <a href="#" class="mega_brnd_img">
-                                                <img loading="lazy"  src="{{asset('template/assets/images/brand-4.png')}}" alt="brand">
+                                                <img loading="lazy"
+                                                    src="{{ asset('template/assets/images/brand-4.png') }}"
+                                                    alt="brand">
                                             </a>
                                             <a href="#" class="mega_brnd_img">
-                                                <img loading="lazy"  src="{{asset('template/assets/images/brand-5.png')}}" alt="brand">
+                                                <img loading="lazy"
+                                                    src="{{ asset('template/assets/images/brand-5.png') }}"
+                                                    alt="brand">
                                             </a>
                                             <a href="#" class="mega_brnd_img">
-                                                <img loading="lazy"  src="{{asset('template/assets/images/brand-6.png')}}" alt="brand">
+                                                <img loading="lazy"
+                                                    src="{{ asset('template/assets/images/brand-6.png') }}"
+                                                    alt="brand">
                                             </a>
                                             <a href="#" class="mega_brnd_img">
-                                                <img loading="lazy"  src="{{asset('template/assets/images/brand-7.png')}}" alt="brand">
+                                                <img loading="lazy"
+                                                    src="{{ asset('template/assets/images/brand-7.png') }}"
+                                                    alt="brand">
                                             </a>
                                             <a href="#" class="mega_brnd_img">
-                                                <img loading="lazy"  src="{{asset('template/assets/images/brand-8.png')}}" alt="brand">
+                                                <img loading="lazy"
+                                                    src="{{ asset('template/assets/images/brand-8.png') }}"
+                                                    alt="brand">
                                             </a>
                                             <a href="#" class="mega_brnd_img">
-                                                <img loading="lazy"  src="{{asset('template/assets/images/brand-9.png')}}" alt="brand">
+                                                <img loading="lazy"
+                                                    src="{{ asset('template/assets/images/brand-9.png') }}"
+                                                    alt="brand">
                                             </a>
                                             <a href="#" class="mega_brnd_img">
-                                                <img loading="lazy"  src="{{asset('template/assets/images/brand-10.png')}}" alt="brand">
+                                                <img loading="lazy"
+                                                    src="{{ asset('template/assets/images/brand-10.png') }}"
+                                                    alt="brand">
                                             </a>
                                             <a href="#" class="mega_brnd_img">
-                                                <img loading="lazy"  src="{{asset('template/assets/images/brand-11.png')}}" alt="brand">
+                                                <img loading="lazy"
+                                                    src="{{ asset('template/assets/images/brand-11.png') }}"
+                                                    alt="brand">
                                             </a>
                                             <a href="#" class="mega_brnd_img">
-                                                <img loading="lazy"  src="{{asset('template/assets/images/brand-12.png')}}" alt="brand">
+                                                <img loading="lazy"
+                                                    src="{{ asset('template/assets/images/brand-12.png') }}"
+                                                    alt="brand">
                                             </a>
                                             <a href="#" class="mega_brnd_img">
-                                                <img loading="lazy"  src="{{asset('template/assets/images/brand-13.png')}}" alt="brand">
+                                                <img loading="lazy"
+                                                    src="{{ asset('template/assets/images/brand-13.png') }}"
+                                                    alt="brand">
                                             </a>
                                             <a href="#" class="mega_brnd_img">
-                                                <img loading="lazy"  src="{{asset('template/assets/images/brand-14.png')}}" alt="brand">
+                                                <img loading="lazy"
+                                                    src="{{ asset('template/assets/images/brand-14.png') }}"
+                                                    alt="brand">
                                             </a>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <a href="#" class="singlecats">
-                                    <span class="img_wrp">
-                                        <i class="las la-mobile"></i>
-                                    </span>
-                                <span class="txt">Mobile</span>
-                            </a>
+                            </div> 
+                            @foreach ($families as $family)
+                            <ul class="list-unstyled mb-0">
+                                <li>
+                                    <a href="{{ route('families.show', $family) }}" class="singlecats">
+
+                                        <span class="txt"> {{ $family->name }}</span>
+                                        <span class="img_wrp">
+                                            <i class="fa-solid fa-angle-right"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                            @endforeach
+ 
+
                         </div>
                     </div>
                 </div>
@@ -325,7 +208,8 @@
                         <div class="search_result_product">
                             <a href="" class="single_sresult_product">
                                 <div class="sresult_img">
-                                    <img loading="lazy"  src="{{asset('template/assets/images/laptop-2.png')}}" alt="product">
+                                    <img loading="lazy" src="{{ asset('template/assets/images/laptop-2.png') }}"
+                                        alt="product">
                                 </div>
                                 <div class="sresult_content">
                                     <h4>HP Pavilion 15</h4>
@@ -336,7 +220,8 @@
                             </a>
                             <a href="" class="single_sresult_product">
                                 <div class="sresult_img">
-                                    <img loading="lazy"  src="{{asset('template/assets/images/laptop-1.png')}}" alt="product">
+                                    <img loading="lazy" src="{{ asset('template/assets/images/laptop-1.png') }}"
+                                        alt="product">
                                 </div>
                                 <div class="sresult_content">
                                     <h4>HP Pavilion 15</h4>
@@ -351,17 +236,17 @@
                 </div>
                 <div class="header_icon d-flex align-items-center">
                     <a href="wish-list.html" class="icon_wrp text-center wishlist ms-0">
-                                <span class="icon">
-                                    <i class="icon-heart"></i>
-                                </span>
+                        <span class="icon">
+                            <i class="icon-heart"></i>
+                        </span>
                         <span class="icon_text">Wish List</span>
                         <span class="pops">6</span>
                     </a>
                     <div class="shopcart">
                         <a href="shopping-cart.html" class="icon_wrp text-center d-none d-lg-block">
-                                    <span class="icon">
-                                        <i class="icon-cart"></i>
-                                    </span>
+                            <span class="icon">
+                                <i class="icon-cart"></i>
+                            </span>
                             <span class="icon_text">Cart</span>
                             <span class="pops">8</span>
                         </a>
@@ -373,7 +258,8 @@
                                 <a href="product-view.html" class="single_cartdrop mb-3">
                                     <span class="remove_cart"><i class="las la-times"></i></span>
                                     <div class="cartdrop_img">
-                                        <img loading="lazy"  src="{{asset('template/assets/images/shoes-5.png')}}" alt="product">
+                                        <img loading="lazy" src="{{ asset('template/assets/images/shoes-5.png') }}"
+                                            alt="product">
                                     </div>
                                     <div class="cartdrop_cont">
                                         <h5 class="text_lg mb-0 default_link">
@@ -385,7 +271,9 @@
                                 <a href="product-view.html" class="single_cartdrop">
                                     <span class="remove_cart"><i class="las la-times"></i></span>
                                     <div class="cartdrop_img">
-                                        <img loading="lazy"  src="{{asset('template/assets/images/headphone-2.png')}}" alt="product">
+                                        <img loading="lazy"
+                                            src="{{ asset('template/assets/images/headphone-2.png') }}"
+                                            alt="product">
                                     </div>
                                     <div class="cartdrop_cont">
                                         <h5 class="text_lg mb-0 default_link">
@@ -407,34 +295,35 @@
                     </div>
                     <div class="position-relative myacwrap">
                         <a href="javascript:void(0)" class="icon_wrp text-center myacc">
-                                    <span class="icon">
-                                       <i class="icon-user-line"></i>
-                                    </span>
+                            <span class="icon">
+                                <i class="icon-user-line"></i>
+                            </span>
                             <span class="icon_text">Account</span>
                         </a>
                         <div class="myacc_cont">
                             <div class="ac_join">
                                 <p>Welcome to RAFCART Shop</p>
                                 <div class="account_btn d-flex justify-content-between">
-                                   <a class="default_btn" href="{{ url("login")}}">{{ __('actions.login') }}</a>
-                                    <a class="default_btn second" href="{{ route('register') }}">{{ __('register') }}</a>
+                                    <a class="default_btn" href="{{ url('login') }}">{{ __('actions.login') }}</a>
+                                    <a class="default_btn second"
+                                        href="{{ route('register') }}">{{ __('register') }}</a>
                                 </div>
                             </div>
                             <div class="ac_links">
-                                  <a href="account.html" class="myac">
+                                <a href="account.html" class="myac">
                                     <i class="lar la-id-card"></i>
                                     My Account
                                 </a>
-                               <a href="account-order-history.html">
+                                <a href="account-order-history.html">
                                     <i class="las la-gift"></i>
                                     My Order
                                 </a>
-                               <a href="wish-list.html">
+                                <a href="wish-list.html">
                                     <i class="lar la-heart"></i>
                                     My Wishlist
                                 </a>
                                 <a href="shopping-cart.html">
-                                     <i class="icon-cart"></i>
+                                    <i class="icon-cart"></i>
                                     My Cart
                                 </a>
                                 <a href="login.html">
