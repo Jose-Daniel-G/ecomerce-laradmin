@@ -5,7 +5,7 @@
 @section('content_header')
     <nav aria-label="breadcrumb">
         <div class="d-flex justify-content-between align-items-center">
-            <h1>Familias</h1>
+            {{-- <h1>Categorias</h1> --}}
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Familias</li>
@@ -16,7 +16,9 @@
 @section('content')
     <div class="card">
         <div class="card-header">
-            <div class="d-flex justify-content-end">
+            <div class="d-flex justify-content-between align-items-center">
+                <h1 class="h4 mb-0">Listado de Familia</h1>
+
                 <a class="btn btn-secondary" data-toggle="modal" data-target="#createModal">Crear Familia
                     <i class="bi bi-plus-circle-fill"></i>
                 </a>

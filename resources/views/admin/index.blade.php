@@ -150,7 +150,7 @@
                         <br>
                     @else
                         <div>
-                            <h3>{{ $total_cursos }}</h3>
+                            <h3> total_cursos </h3>
                             <p>Cursos </p>
                         </div>
                     @endif

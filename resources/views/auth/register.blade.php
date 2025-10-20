@@ -11,6 +11,7 @@
     @php($login_url = $login_url ? url($login_url) : '')
     @php($register_url = $register_url ? url($register_url) : '')
 @endif
+
 @section('content')
     <div class="register_wrap section_padding_b">
         <div class="container">
@@ -54,9 +55,33 @@
                                     </span>
                                 @enderror
                             </div>
+                            <label for="document_type">Tipo de documento</label>
 
+                            <select class="nice_select mb-3" id="document_type" name="document_type">
+                                <option value="" selected disabled>Seleccione</option>
+                                <option value="1">DNI</option>
+                                <option value="2">CE</option>
+                                <option value="3">RUC</option>
+                                <option value="4">PP</option>
+                                <option value="5">LE</option>
+                                <option value="6">ID</option>
+                            </select>
+
+                            {{-- Document number field --}}
+                            <div class="input-group mb-3">
+                                <input type="text" name="document_number"
+                                    class="form-control @error('document_number') is-invalid @enderror"
+                                    value="{{ old('document_number') }}" placeholder="Número de documento">
+                                    
+                                @error('document_number')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
                             {{-- Email field --}}
                             <div class="input-group mb-3">
+
                                 <input type="email" name="email"
                                     class="form-control @error('email') is-invalid @enderror" value="{{ old('email') }}"
                                     placeholder="{{ __('adminlte::adminlte.email') }}">
@@ -71,7 +96,17 @@
                                     </span>
                                 @enderror
                             </div>
-
+                            {{-- Phone field --}}
+                            <div class="input-group mb-3">
+                                <input type="text" name="phone"
+                                    class="form-control @error('phone') is-invalid @enderror" value="{{ old('phone') }}"
+                                    placeholder="Número de documento">
+                                @error('phone')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
                             {{-- Password field --}}
                             <div class="input-group mb-3">
                                 <input type="password" name="password"

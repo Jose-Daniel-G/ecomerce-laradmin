@@ -59,7 +59,7 @@
         <script>
             Swal.fire({title: "{{ session('title') }}",text: "{{ session('info') }}",icon: "{{ session('icon') }}"});
         </script>
-    @else <!-- TOAST ALERT MESSAGE -->
+    @elseif (session('toast')) <!-- TOAST ALERT MESSAGE -->
         <script>toastr.success('{{ session('info') }}');</script> 
     @endif 
     {{-- @vite(['resources/js/pages/delete-confirm.ts']) --}}

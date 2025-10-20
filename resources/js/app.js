@@ -1,4 +1,5 @@
 import './bootstrap';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import 'jquery-ui/ui/widgets/datepicker'; // Ejemplo: importando solo el widget de datepicker
 
 import 'datatables.net-bs5';
