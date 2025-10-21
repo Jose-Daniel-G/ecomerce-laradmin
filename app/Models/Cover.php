@@ -19,6 +19,8 @@ class Cover extends Model
     ];
 
     protected function image():Attribute{
-        return Attribute::make(get: fn()=>Storage::url($this->image_path));
+    return Attribute::make(
+        get: fn () => 'Storage/'.$this->image_path
+    );
     }
 }

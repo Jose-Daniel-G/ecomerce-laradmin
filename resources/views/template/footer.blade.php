@@ -5,9 +5,9 @@
                 <div class="col-lg-4 mb-4 mb-md-0">
                     <div class="row">
                         <div class="col-12 col-md-6 col-lg-12">
-                            <div class="footer_logo">
-                                <img loading="lazy"  src="{{asset('template/assets/images/svg/logo.svg')}}" alt="easy shop">
-                            </div>
+                            {{-- <div class="footer_logo">
+                                <img loading="lazy" src="{{ asset('vendor/adminlte/dist/img/JDcompany.png') }}" alt="easy shop">
+                            </div> --}}
                             <div class="footet_text">
                                 <p>Lorem ipsum, or lipsum as it is sometimes kno
                                     wn, is dummy text used in laying out print, gra

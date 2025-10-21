@@ -81,7 +81,7 @@
     </div>
 
     <!-- features area -->
-    <section class="features_area  section_padding">
+    {{-- <section class="features_area  section_padding">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-xl-10">
@@ -127,10 +127,10 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <!-- top ranking -->
-    <section class="top_ranking section_padding_b">
+    {{-- <section class="top_ranking section_padding_b">
         <div class="container">
             <h2 class="section_title_2 mb-0">Top Ranking</h2>
             <div class="row">
@@ -496,7 +496,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <!-- new arrive -->
     <section class="new_arrive section_padding_b">
@@ -678,7 +678,7 @@
     </section>
 
     <!-- ad banner -->
-    <div class="ad_banner_area section_padding_b">
+    {{-- <div class="ad_banner_area section_padding_b">
         <div class="container">
             <a href="#">
                
@@ -688,10 +688,10 @@
                 </picture>
             </a>
         </div>
-    </div>
+    </div> --}}
 
     <!-- recomended -->
-    <section class="new_arrive section_padding_b">
+    {{-- <section class="new_arrive section_padding_b">
         <div class="container">
             <div class="d-flex align-items-start justify-content-between">
                 <h2 class="section_title_2">Recomended for you</h2>
@@ -1031,10 +1031,10 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <!-- download app -->
-    <section class="download_wrap section_padding_b">
+    {{-- <section class="download_wrap section_padding_b">
         <div class="container">
             <div class="download_bg">
                 <div class="row">
@@ -1045,7 +1045,7 @@
                     </div>
                     <div class="col-lg-5 px-5 px-lg-0">
                         <div class="download_cont">
-                            <h2 class="title_2 text-capitalize mb-3">Download RAFCART App Now!</h2>
+                            <h2 class="title_2 text-capitalize mb-3">Download JDcompany App Now!</h2>
                             <p class="mb-4">Shopping fastly and easily more with our app. Get a link to <br class="d-none d-xl-block"> download
                                 the app on your
                                 phone</p>
@@ -1066,4 +1066,4 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}

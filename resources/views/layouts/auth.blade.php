@@ -17,6 +17,9 @@
     <link rel="stylesheet" href="{{ asset('template/assets/css/nice-select.css') }}">
     <link rel="stylesheet" href="{{ asset('template/assets/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('template/assets/css/responsive.css') }}">
+    <link rel="stylesheet" href="{{ asset('template/assets/css/welcome.css') }}">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
 </head>
 
 <body>
@@ -27,18 +30,12 @@
     </div>
 
     <!-- top header -->
-    @include('template.header')
+    {{-- @include('template.header') --}}
 
     <!-- navbar -->
     @include('template.navbar')
-
-    <!-- breadcrumbs -->
-    <div class="container">
-        <div class="breadcrumbs">
-            <a href="#"><i class="las la-home"></i></a>
-            <a href="#" class="active">Login</a>
-        </div>
-    </div>
+    <!-- mobile bottom bar / mobile menu -->
+    @include('template.mobile') 
     <!--Login wrap-->
     <main>
         @yield('content')
@@ -58,5 +55,50 @@
     <script src="{{ asset('template/assets/js/slick.min.js') }}"></script>
     <script src="{{ asset('template/assets/js/jquery.nice-select.min.js') }}"></script>
     <script src="{{ asset('template/assets/js/app.js') }}"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+        <script>
+            const swiper = new Swiper('.swiper', {
+                // Optional parameters
+                loop: true,
+                autoplay: {
+                    delay: 5000,
+                },
+                // If we need pagination
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+
+                // Navigation arrows
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+
+            });
+        </script>
+        <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuButton = document.getElementById('menu-button');
+            const subCategories = document.getElementById('sub-categories-wrapper');
+
+            menuButton.addEventListener('click', () => {
+                const isPinned = subCategories.classList.toggle('pinned');
+
+                // Cambiar el ícono y texto del botón
+                const icon = menuButton.querySelector('i');
+                const text = menuButton.querySelector('.icon_text');
+
+                if (isPinned) {
+                    icon.classList.remove('la-bars');
+                    icon.classList.add('la-thumbtack');
+                    text.textContent = 'Unpin menu';
+                } else {
+                    icon.classList.remove('la-thumbtack');
+                    icon.classList.add('la-bars');
+                    text.textContent = 'All categories';
+                }
+            });
+        });
+    </script>
 </body>
 </html>

@@ -9,6 +9,8 @@ use App\Models\Variant;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [WelcomeController::class,'index'])->name('welcome.index');
+Route::get('/login', [WelcomeController::class,'login'])->name('welcome.login');
+Route::get('/register', [WelcomeController::class,'register'])->name('welcome.register');
 Route::get('/families/{family}', [FamilyController::class,'show'])->name('families.show');
 Route::get('/subcategories/{subcategory}', [SubcategoryController::class,'show'])->name('subcategories.show');
 

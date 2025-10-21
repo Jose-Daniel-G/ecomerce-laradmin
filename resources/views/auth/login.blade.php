@@ -12,7 +12,7 @@
                     <p class="mb-4 text_md">Login if you are a returning customer</p>
 
                     <!-- Formulario de Login funcional de Laravel -->
-                    <form method="POST" action="{{ route('login') }}">
+                    <form method="POST" action="{{ route('welcome.login') }}">
                         @csrf
 
                         <div class="row">
@@ -40,7 +40,7 @@
 
                             <!-- Remember + Forgot -->
                             <div class="col-12 mt-2 d-flex justify-content-between align-items-center">
-                                <div class="custom_check check_2 d-flex align-items-center">
+                                <div class="check_2 d-flex align-items-center">
                                     <input type="checkbox" class="check_inp" id="remember_me" name="remember">
                                     <label for="remember_me">Remember Me</label>
                                 </div>
@@ -63,17 +63,17 @@
                         <span class="txt">Or login with</span>
                     </div>
 
-                    <div class="d-flex">
+                    {{-- <div class="d-flex">
                         <a href="#" class="default_btn xs_btn rounded px-4 d-block w-50 text-capitalize bg-facebook text-center">
                             <i class="fab fa-facebook-f me-2"></i> Facebook
                         </a>
                         <a href="#" class="default_btn xs_btn rounded px-4 d-block w-50 ms-3 text-capitalize bg-google text-center">
                             <i class="fab fa-google me-2"></i> Google
                         </a>
-                    </div>
+                    </div> --}}
 
                     <p class="text-center mt-3 mb-0">
-                        Don't have an account? <a href="{{ route('register') }}" class="text-color">Register Now</a>
+                        Don't have an account? <a href="{{ route('welcome.register') }}" class="text-color">Register Now</a>
                     </p>
 
                 </div>
