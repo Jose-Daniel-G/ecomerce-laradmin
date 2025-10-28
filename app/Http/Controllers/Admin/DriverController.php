@@ -14,7 +14,8 @@ class DriverController extends Controller
     // }
     public function index()
     {
-        //
+        $drivers = Driver::all();
+        return view('admin.drivers.index', compact('drivers'));
     }
 
     /**
@@ -22,7 +23,7 @@ class DriverController extends Controller
      */
     public function create()
     {
-        //
+        // return view('admin.drivers.create');
     }
 
     /**
@@ -30,7 +31,7 @@ class DriverController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return redirect()->back()->with(['swal'=>1, 'icon'=>'success', 'title' => 'Exito', 'info'=>'Conductor creado exitosamente']);
     }
 
     /**
@@ -54,7 +55,7 @@ class DriverController extends Controller
      */
     public function update(Request $request, Driver $driver)
     {
-        //
+        return redirect()->back()->with(['swal'=>1, 'icon'=>'success', 'title' => 'Exito', 'info'=>'Conductor actualizado exitosamente']);
     }
 
     /**
@@ -62,6 +63,6 @@ class DriverController extends Controller
      */
     public function destroy(Driver $driver)
     {
-        //
+        return redirect()->back()->with(['swal'=>1, 'icon'=>'success', 'title' => 'Exito', 'info'=>'Conductor eliminado exitosamente']);
     }
 }

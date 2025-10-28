@@ -322,7 +322,7 @@ return [
         [
             'text' => 'Subcategorias',
             'icon' => 'fa-solid fa-tag',
-            'route ' => 'admin.subcategories.index',
+            'route' => 'admin.subcategories.index',
         ],
         [
             'text' => 'Productos',
@@ -337,20 +337,17 @@ return [
         [
             'text' => 'Conductores',
             'icon' => 'fa-solid fa-car',
-            'url'  => '#',
-            // 'route' => 'admin.drives.index',
+            'route' => 'admin.drivers.index',
         ],
         [
             'text' => 'Ordenes',
-            'icon' => 'fa-solid fa-images',
-            'url'  => '#',
-            // 'route' => 'admin.orders.index',
+            'icon' => 'fa-solid fa-shopping-cart',
+            'route' => 'admin.orders.index',
         ],
         [
             'text' => 'Envios',
-            'icon' => 'fa-solid fa-box',
-            'url'  => '#',
-            // 'route' => 'admin.drives.index',
+            'icon' => 'fa-solid fa-truck-fast',
+            'route' => 'admin.shipment.index',
         ],
     
         // ['text'=> 'Agenda','url' => 'admin.users.index','icon' => 'fas fa-envelope',],

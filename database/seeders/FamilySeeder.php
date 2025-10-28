@@ -16,10 +16,8 @@ class FamilySeeder extends Seeder
     public function run(): void
     {
         $families = [
-            'Tecnologia' => [
-                //CATEGORIES
-                'Televisores' => [
-                    //SUBCATEGORIES 
+            'Tecnologia' => [ 
+                'Televisores' => [ 
                     'Accesorios para TV',
                     'LED',
                     'OLED',

@@ -9,11 +9,10 @@ use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\ShipmentController;
 use App\Http\Controllers\Admin\SubcategoryController;
 use App\Http\Controllers\Admin\UserProfileController;
-use App\Livewire\Admin\UserComponent; 
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('admin.dashboard');
+    return view('admin.index');
 })->name('dashboard');//->middleware('can:access dashboard')
 
 Route::resource('families', FamilyController::class)->names('families');
@@ -32,6 +31,7 @@ Route::put('products/{product}/variants/{variant}', [ProductController::class, '
 Route::resource('drivers', DriverController::class);
 Route::resource('orders', ShipmentController::class);
 Route::resource('covers', CoverController::class);
+Route::resource('shipment', ShipmentController::class);
 // Route::get('users', UserComponent::class)->name('admin.users.index');
 
 // Route::resource('products/{product}/variants/{variant}', [ProductController::class,'index'])

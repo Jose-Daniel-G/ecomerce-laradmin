@@ -58,8 +58,7 @@ class FamilyController extends Controller
     public function destroy(Family $family)
     {
         if ($family->categories->count()) {
-            return redirect()->route('admin.families.edit', $family)
-                ->with(['swal' => 1, 'icon' => 'error', 'title' => 'Ups!', 'info' => 'No se puede eliminar la familia porque tiene categorias asociadas']);
+            return redirect()->back()->with(['swal' => 1, 'icon' => 'error', 'title' => 'Ups!', 'info' => 'No se puede eliminar la familia porque tiene categorias asociadas']);
         }
         $family->delete();
 

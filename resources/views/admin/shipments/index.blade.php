@@ -5,7 +5,7 @@
         <div class="d-flex justify-content-between align-items-center"> 
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Conductores</li>
+                <li class="breadcrumb-item active" aria-current="page">Envios</li>
             </ol>
         </div>
     </nav>
@@ -15,9 +15,9 @@
     <div class="card">
         <div class="card-header">
             <div class="d-flex justify-content-between align-items-center">
-                <h1 class="h4 mb-0">Listado de Familia</h1>
+                <h1 class="h4 mb-0">Listado de Envios</h1>
 
-                <a class="btn btn-secondary" data-toggle="modal" data-target="#createModal">Crear Familia
+                <a class="btn btn-secondary" data-toggle="modal" data-target="#createModal">Crear Envios
                     <i class="bi bi-plus-circle-fill"></i>
                 </a>
             </div>

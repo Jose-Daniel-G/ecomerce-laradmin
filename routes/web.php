@@ -1,6 +1,7 @@
 <?php
 
-use App\Http\Controllers\Admin\ShipmentController; 
+use App\Http\Controllers\Admin\ShipmentController;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\FamilyController;
 use App\Http\Controllers\SubcategoryController;
 use App\Http\Controllers\WelcomeController;
@@ -15,6 +16,9 @@ Route::get('/families/{family}', [FamilyController::class,'show'])->name('famili
 Route::get('/subcategories/{subcategory}', [SubcategoryController::class,'show'])->name('subcategories.show');
 
 Route::get('shipping', [ShipmentController::class,'index'])->name('shipping.index');
+Route::get('checkout', [CheckoutController::class,'index'])->name('checkout.index');
+
+Route::get('/cart', [CartController::class,'index'])->name('cart.index'); 
 
 Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified',
 ])->group(function () {

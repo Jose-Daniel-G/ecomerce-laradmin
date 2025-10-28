@@ -59,9 +59,9 @@ class CategoryController extends Controller
     public function destroy(Category $category)
     {
         if ($category->subcategories->count() > 0) {
-            return redirect()->route('admin.categories.edit', $category)->with(['swal' => 1, 'icon' => 'error', 'title' => 'Ups!', 'info' => 'No se puede eliminar la categoria porque tiene subcategorias asociadas']);
+            return redirect()->back()->with(['swal' => 1, 'icon' => 'error', 'title' => 'Ups!', 'info' => 'No se puede eliminar la categoria porque tiene subcategorias asociadas']);
         }
-        return redirect()->route('admin.categories.index')->with(['swal' => 1, 'icon' => 'success', 'title' => '!Bien echo', 'info' => 'Categoria eliminada correctamente']);
         $category->delete();
+        return redirect()->route('admin.categories.index')->with(['swal' => 1, 'icon' => 'success', 'title' => '!Bien echo', 'info' => 'Categoria eliminada correctamente']);
     }
 }

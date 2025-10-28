@@ -87,6 +87,14 @@
     </div> --}}
  <!-- Slider principal -->
     <div class="swiper mb-4">
+        @php
+            $covers = collect([
+                (object)['id'=>1, 'image'=>'images/covers/tv.png', 'title'=>'img'],
+                (object)['id'=>2, 'image'=>'images/covers/laptop.png', 'title'=>'img'],
+                (object)['id'=>3, 'image'=>'images/covers/appliance.png', 'title'=>'img'],
+            ]);
+
+        @endphp
         <!-- Contenedor de slides -->
         <div class="swiper-wrapper">
             @foreach ($covers as $cover)

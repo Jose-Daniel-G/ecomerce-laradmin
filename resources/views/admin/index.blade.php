@@ -146,12 +146,12 @@
                 <div class="inner">
                     @if (Auth::user()->hasRole('superAdmin') || Auth::user()->hasRole('admin') || Auth::user()->hasRole('secretaria'))
                         <h4>Estadísticas</h4>
-                        <h5 class="mb-2">(Cursos)</h5>
+                        <h5 class="mb-2">(Ventas)</h5>
                         <br>
                     @else
                         <div>
                             <h3> total_cursos </h3>
-                            <p>Cursos </p>
+                            <p>Ventas </p>
                         </div>
                     @endif
 
@@ -218,137 +218,7 @@
 
 
     </div>
-    <div class="card card-primary card-outline card-tabs">
-        <div class="card-header p-0 pt-1 border-bottom-0">
-            <ul class="nav nav-tabs" id="custom-tabs-three-tab" role="tablist">
-                @can('show_datos_cursos')
-                    <li class="nav-item">
-                        <a class="nav-link active" id="custom-tabs-three-profile-tab" data-toggle="pill"
-                            href="#custom-tabs-three-profile" role="tab" aria-controls="custom-tabs-three-profile"
-                            aria-selected="false">Calendario de reserva</a>
-                    </li>
-                @endcan
-                <li class="nav-item">
-                    <a class="nav-link " id="custom-tabs-three-home-tab" data-toggle="pill"
-                        href="#custom-tabs-three-home" role="tab" aria-controls="custom-tabs-three-home"
-                        aria-selected="false">Horario de
-                        profesores</a>
-                </li>
-            </ul>
-        </div>
-        <div class="card-body">
-            <div class="tab-content" id="custom-tabs-three-tabContent">
-                <div class="tab-pane fade" id="custom-tabs-three-home" role="tabpanel"
-                    aria-labelledby="custom-tabs-three-home-tab">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <h3 class="card-title">Calendario de atencion de profesores </h3>
-                        </div>
-                        <div class="col-md d-flex justify-content-end">
-                            <label for="curso_id">Cursos </label><b class="text-danger">*</b>
-                        </div>
-                        <div class="col-md-4">
-                            {{-- <select name="curso_id" id="profesor_select" class="form-control">
-                                <option value="" selected disabled>Seleccione una opción</option>
-                                @foreach ($profesorSelect as $curso)
-                                    <option value="{{ $curso->id }}">
-                                        {{ $curso->cursos . ' - ' . $curso->nombres }} </option>
-                                @endforeach
-                            </select> --}}
-                        </div>
-                        <div class="col-md">
-                            <button type="button" class="btn btn-primary" data-toggle="modal"
-                                data-target="#claseModal">
-                                Agendar
-                            </button>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <hr>
-                            <div id="curso_info"></div>
-                        </div>
-
-                    </div>
-                </div>
-                @can('show_datos_cursos')
-                    <div class="tab-pane fade active show" id="custom-tabs-three-profile" role="tabpanel"
-                        aria-labelledby="custom-tabs-three-profile-tab">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <!-- Button trigger modal -->
-                                <button type="button" class="btn btn-primary" data-toggle="modal"
-                                    data-target="#claseModal"> Agendar Clase</button>
-
-                                <a href="{{ route('admin.reservas.show', Auth::user()->id) }}" class="btn btn-success">
-                                    <i class="bi bi-calendar-check"></i>Ver las reservas
-                                </a>
-                            </div>
-
-                            <!-- Incluir Modal INFO-->
-                            @include('admin.agenda-modal.show')
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div id="profesor_info"></div>
-                                <div id="calendar"></div>
-                            </div>
-                        </div>
-                    </div>
-                @endcan 
-            </div>
-        </div>
-    </div>{{-- PROFESORES AGENDA --}}
-    @if (Auth::check() && Auth::user()->profesor)
-        <div class="row">
-            <div class="col-md-12">
-                <div class="card card-outline card-primary">
-                    <div class="card-header">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <h3 class="card-title">Calendario de reservas</h3>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card-body">
-                        {{ Auth::user()->profesor->nombres }}
-                        <table id="reservas" class="table table-striped table-bordered table-hover table-sm">
-                            <thead class="thead-dark">
-                                <tr>
-                                    <th>Nro</th>
-                                    <th>Profesor</th>
-                                    <th>Cliente</th>
-                                    <th>Fecha de la reserva</th>
-                                    <th>Hora de reserva</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php $contador = 1; ?>
-                                @foreach ($agendas as $agenda)
-                                    @if (Auth::user()->profesor->id == $agenda->profesor_id)
-                                        <tr>
-                                            <td scope="row">{{ $contador++ }}</td>
-                                            <td scope="row">
-                                                {{ $agenda->profesor->nombres . ' ' . $agenda->profesor->apellidos }}
-                                            </td>
-                                            <td scope="row">
-                                                {{ $agenda->cliente->nombres . ' ' . $agenda->cliente->apellidos }}
-                                            </td>
-                                            <td scope="row" class="text-center">
-                                                {{ $agenda->start->format('d M, Y') }}</td>
-                                            <td scope="row" class="text-center">
-                                                {{ $agenda->end->format('H:i') }}</td>
-                                        </tr>
-                                    @endif
-                                @endforeach
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-    @endif
+ 
 
 @stop
 

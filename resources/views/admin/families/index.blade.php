@@ -4,8 +4,7 @@
 @stop
 @section('content_header')
     <nav aria-label="breadcrumb">
-        <div class="d-flex justify-content-between align-items-center">
-            {{-- <h1>Categorias</h1> --}}
+        <div class="d-flex justify-content-between align-items-center"> 
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Familias</li>
@@ -48,17 +47,16 @@
                                         <a href="#" class="btn btn-warning btn-sm mr-1" data-id="{{ $family->id }}"
                                             data-toggle="modal" data-target="#editModal" title="Editar"> <i
                                                 class="fas fa-edit"></i></a>
-                                        <form id="delete-form-{{ $family->id }}"
-                                            action="{{ route('admin.families.destroy', $family) }}" method="POST"
-                                            class="d-inline">
-                                            @csrf
-                                            @method('DELETE')
-                                            <button type="button" class="btn btn-danger btn-sm"
-                                                onclick="confirmDelete({{ $family->id }})">
-                                                <i class="fa fa-trash"></i>
-                                            </button>
+                                        {{-- form DELETE --}}
+                                        <form id="delete-form-{{ $family->id }}" 
+                                            action="{{ route('admin.families.destroy', $family->id) }}"  class="d-inline" method="POST">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="button" class="btn btn-danger btn-sm btn-delete"
+                                                    data-id="{{ $family->id }}"
+                                                    data-text="¿Estás seguro de que deseas eliminar esta familia?">
+                                                    <i class="fas fa-trash"></i>
                                         </form>
-
                                     </td>
                                 </tr>
                             @endforeach
